@@ -17,13 +17,14 @@ namespace SeaWars
         public Pole()
         {
             InitializeComponent();
-            radioButton2.Enabled = false;
-            radioButton3.Enabled = false;
-            radioButton4.Enabled = false;
+           
         }
 
         private void Pole_Load(object sender, EventArgs e)
         {
+            radioButton2.Enabled = false;
+            radioButton3.Enabled = false;
+            radioButton4.Enabled = false;
             groupBox1.Visible = false;
             dataGridView1.Enabled = false;
             dataGridView2.Enabled = false;
