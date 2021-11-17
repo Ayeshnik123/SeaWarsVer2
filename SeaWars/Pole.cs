@@ -10,10 +10,12 @@ using System.Windows.Forms;
 
 namespace SeaWars
 {
+
     public partial class Pole : Form
     {
         int abv = 0;
         int a = 0;
+
         public Pole()
         {
             InitializeComponent();
@@ -22,6 +24,8 @@ namespace SeaWars
 
         private void Pole_Load(object sender, EventArgs e)
         {
+
+            button1.Enabled = false;
             radioButton2.Enabled = false;
             radioButton3.Enabled = false;
             radioButton4.Enabled = false;
@@ -89,7 +93,8 @@ namespace SeaWars
 
         private void button2_Click(object sender, EventArgs e)
         {
-
+            button1.Enabled = false;
+            button2.Enabled = false;
             for (int i = 0; i < dataGridView1.RowCount; i++)
                 for (int j = 0; j < dataGridView1.ColumnCount; j++)
                 {
@@ -113,6 +118,7 @@ namespace SeaWars
 
         private void button1_Click(object sender, EventArgs e)
         {
+            
             Bot.Pole(dataGridView2, abv);
             groupBox1.Visible = false;
             korabli.Visible = false;
@@ -180,6 +186,7 @@ namespace SeaWars
                     a++;
                     if (a == 1) radioButton4.Enabled = false;
                     if (a == 1) dataGridView1.Enabled = false;
+                    if (a == 1) button1.Enabled = true;
                 }
             }
             if (radioButton6.Checked == true)
@@ -239,6 +246,7 @@ namespace SeaWars
                     a++;
                     if (a == 1) radioButton4.Enabled = false;
                     if (a == 1) dataGridView1.Enabled = false;
+                    if (a == 1) button1.Enabled = true;
                 }
             }
         }
@@ -256,6 +264,7 @@ namespace SeaWars
         private void korabli_Click(object sender, EventArgs e)
         {
             groupBox1.Visible = true;
+
         }
 
         private void dataGridView2_SelectionChanged(object sender, EventArgs e)
