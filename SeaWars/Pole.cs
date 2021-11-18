@@ -25,7 +25,7 @@ namespace SeaWars
         private void Pole_Load(object sender, EventArgs e)
         {
 
-            button1.Enabled = false;
+            //button1.Enabled = false;
             radioButton2.Enabled = false;
             radioButton3.Enabled = false;
             radioButton4.Enabled = false;
@@ -94,7 +94,7 @@ namespace SeaWars
         private void button2_Click(object sender, EventArgs e)
         {
             button1.Visible = true;
-            button1.Enabled = false;
+            //button1.Enabled = false;
             for (int i = 0; i < dataGridView1.RowCount; i++)
                 for (int j = 0; j < dataGridView1.ColumnCount; j++)
                 {
