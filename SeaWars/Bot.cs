@@ -569,5 +569,20 @@ namespace SeaWars
                 }
             }
         }
+        public static void ubil(DataGridView dataGridView2)
+        {
+            // Первый вариант
+            if(dataGridView2[1, 1].Style.BackColor == Color.Red)
+            {
+                dataGridView2[0, 0].Style.BackColor = Color.Aqua;
+                dataGridView2[1, 0].Style.BackColor = Color.Aqua;
+                dataGridView2[2, 0].Style.BackColor = Color.Aqua;
+                dataGridView2[2, 1].Style.BackColor = Color.Aqua;
+                dataGridView2[2, 2].Style.BackColor = Color.Aqua;
+                dataGridView2[1, 2].Style.BackColor = Color.Aqua;
+                dataGridView2[0, 2].Style.BackColor = Color.Aqua;
+                dataGridView2[0, 1].Style.BackColor = Color.Aqua;
+            }
+        }
     }
 }

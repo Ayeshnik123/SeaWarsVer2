@@ -259,6 +259,7 @@ namespace SeaWars
             if (dataGridView2.CurrentCell.Style.BackColor == Color.Red) dataGridView2.CurrentCell.Style.BackColor = Color.Red;
             else this.dataGridView2.CurrentCell.Style.BackColor = Color.Aqua;
             Bot.shoot(dataGridView1, abv);
+            Bot.ubil(dataGridView2);
  
         }
 
