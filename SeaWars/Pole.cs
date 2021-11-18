@@ -304,9 +304,5 @@ namespace SeaWars
         {
             dataGridView1.Enabled = true;
         }
-
-        private void checkBox1_CheckedChanged(object sender, EventArgs e)
-        {
-        }
     }
 }

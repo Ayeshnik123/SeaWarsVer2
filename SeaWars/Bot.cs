@@ -684,6 +684,20 @@ namespace SeaWars
                 dataGridView2[1, 7].Style.BackColor = Color.Aqua;
                 dataGridView2[0, 7].Style.BackColor = Color.Aqua;
             }
+            if (dataGridView2[1, 1].Style.BackColor == Color.Red && dataGridView2[5, 5].Style.BackColor == Color.Red 
+                && dataGridView2[7, 7].Style.BackColor == Color.Red && dataGridView2[3, 4].Style.BackColor == Color.Red
+                && dataGridView2[2, 6].Style.BackColor == Color.Red && dataGridView2[2, 7].Style.BackColor == Color.Red
+                && dataGridView2[0, 9].Style.BackColor == Color.Red && dataGridView2[1, 9].Style.BackColor == Color.Red
+                && dataGridView2[9, 0].Style.BackColor == Color.Red && dataGridView2[9, 1].Style.BackColor == Color.Red
+                && dataGridView2[3, 1].Style.BackColor == Color.Red && dataGridView2[4, 1].Style.BackColor == Color.Red
+                && dataGridView2[5, 1].Style.BackColor == Color.Red && dataGridView2[7, 3].Style.BackColor == Color.Red
+                && dataGridView2[8, 3].Style.BackColor == Color.Red && dataGridView2[9, 3].Style.BackColor == Color.Red
+                && dataGridView2[0, 3].Style.BackColor == Color.Red && dataGridView2[0, 4].Style.BackColor == Color.Red
+                && dataGridView2[0, 5].Style.BackColor == Color.Red && dataGridView2[0, 6].Style.BackColor == Color.Red)
+            {
+                MessageBox.Show("Вы победили");
+            }
+            // Второй вариант
         }
     }
 }
