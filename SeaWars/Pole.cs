@@ -93,8 +93,8 @@ namespace SeaWars
 
         private void button2_Click(object sender, EventArgs e)
         {
+            button1.Visible = true;
             button1.Enabled = false;
-            button2.Enabled = false;
             for (int i = 0; i < dataGridView1.RowCount; i++)
                 for (int j = 0; j < dataGridView1.ColumnCount; j++)
                 {
@@ -124,6 +124,7 @@ namespace SeaWars
             korabli.Visible = false;
             dataGridView1.Enabled = false;
             dataGridView2.Enabled = true;
+            button1.Visible = false;
         }
 
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -254,8 +255,8 @@ namespace SeaWars
 
         private void dataGridView2_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (dataGridView2.CurrentCell.Style.BackColor == Color.Transparent) dataGridView2.CurrentCell.Style.BackColor = Color.Black;
-            if (dataGridView2.CurrentCell.Style.BackColor == Color.Black) dataGridView2.CurrentCell.Style.BackColor = Color.Black;
+            if (dataGridView2.CurrentCell.Style.BackColor == Color.Transparent) dataGridView2.CurrentCell.Style.BackColor = Color.Red;
+            if (dataGridView2.CurrentCell.Style.BackColor == Color.Red) dataGridView2.CurrentCell.Style.BackColor = Color.Red;
             else this.dataGridView2.CurrentCell.Style.BackColor = Color.Aqua;
             Bot.shoot(dataGridView1, abv);
  
