@@ -36,7 +36,7 @@ namespace SeaWars
             // 
             // Igrat
             // 
-            this.Igrat.Location = new System.Drawing.Point(108, 12);
+            this.Igrat.Location = new System.Drawing.Point(214, 28);
             this.Igrat.Name = "Igrat";
             this.Igrat.Size = new System.Drawing.Size(425, 126);
             this.Igrat.TabIndex = 2;
@@ -46,7 +46,7 @@ namespace SeaWars
             // 
             // oprog
             // 
-            this.oprog.Location = new System.Drawing.Point(108, 155);
+            this.oprog.Location = new System.Drawing.Point(214, 160);
             this.oprog.Name = "oprog";
             this.oprog.Size = new System.Drawing.Size(425, 126);
             this.oprog.TabIndex = 3;
@@ -58,7 +58,9 @@ namespace SeaWars
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(651, 293);
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ClientSize = new System.Drawing.Size(801, 348);
             this.Controls.Add(this.oprog);
             this.Controls.Add(this.Igrat);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));

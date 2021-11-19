@@ -16,6 +16,7 @@ namespace SeaWars
         int rastanovka = 0;
         int a = 0;
 
+
         public Pole()
         {
             InitializeComponent();
