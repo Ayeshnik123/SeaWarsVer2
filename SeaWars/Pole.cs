@@ -13,7 +13,7 @@ namespace SeaWars
 
     public partial class Pole : Form
     {
-        int abv = 0;
+        int rastanovka = 0;
         int a = 0;
 
         public Pole()
@@ -119,7 +119,7 @@ namespace SeaWars
         private void button1_Click(object sender, EventArgs e)
         {
             
-            Bot.Pole(dataGridView2, abv);
+            Bot.Pole(dataGridView2, rastanovka);
             groupBox1.Visible = false;
             korabli.Visible = false;
             dataGridView1.Enabled = false;
@@ -258,7 +258,7 @@ namespace SeaWars
             if (dataGridView2.CurrentCell.Style.BackColor == Color.Transparent) dataGridView2.CurrentCell.Style.BackColor = Color.Red;
             if (dataGridView2.CurrentCell.Style.BackColor == Color.Red) dataGridView2.CurrentCell.Style.BackColor = Color.Red;
             else this.dataGridView2.CurrentCell.Style.BackColor = Color.Aqua;
-            Bot.shoot(dataGridView1, abv);
+            Bot.shoot(dataGridView1, rastanovka);
             Bot.ubil(dataGridView2);
  
         }

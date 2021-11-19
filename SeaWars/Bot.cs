@@ -10,14 +10,14 @@ namespace SeaWars
 {
     class Bot
     {
-        public static void Pole(DataGridView dataGridView2, int abv)
+        public static void Pole(DataGridView dataGridView2, int rastanovka)
         {
 
             Random rand = new Random();
             for (int i = 0; i < 1; i++)
             {
-                abv = rand.Next(3, 3);
-                switch (abv)
+                rastanovka = rand.Next(1, 3);
+                switch (rastanovka)
                 {
                     case (1):
                         dataGridView2[1, 1].Style.BackColor = Color.Transparent;//1
