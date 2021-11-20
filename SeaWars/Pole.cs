@@ -99,12 +99,12 @@ namespace SeaWars
             for (int i = 0; i < dataGridView1.RowCount; i++)
                 for (int j = 0; j < dataGridView1.ColumnCount; j++)
                 {
-                    dataGridView1[i, j].Style.BackColor = Color.White;
+                    dataGridView1[i, j].Style.BackColor = default;
                 }
             for (int i = 0; i < dataGridView2.RowCount; i++)
                 for (int j = 0; j < dataGridView2.ColumnCount; j++)
                 {
-                    dataGridView2[i, j].Style.BackColor = Color.White;
+                    dataGridView2[i, j].Style.BackColor = default;
                 }
             groupBox1.Visible = false;
             korabli.Visible = true;
@@ -130,248 +130,254 @@ namespace SeaWars
 
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (radioButton5.Checked == true)
+            if (dataGridView1.CurrentCell.Style.BackColor == default)
             {
-                if (radioButton1.Checked)
+                if (radioButton5.Checked == true)
                 {
-                    dataGridView1.CurrentCell.Style.BackColor = Color.Black;
-                    a++;
-                    if (a == 4) radioButton1.Enabled = false;
-                    if (a == 4) dataGridView1.Enabled = false;
-                    if (a == 4) radioButton2.Enabled = true;
-                }
-                if (radioButton2.Checked)
-                {
-                    for (int i = 0; i < dataGridView1.RowCount; i++)
-                        for (int j = 0; j < dataGridView1.ColumnCount; j++)
-                        {
-                            try
+                    if (radioButton1.Checked)
+                    {
+                        dataGridView1.CurrentCell.Style.BackColor = Color.Black;
+                        a++;
+                        if (a == 4) radioButton1.Enabled = false;
+                        if (a == 4) dataGridView1.Enabled = false;
+                        if (a == 4) radioButton2.Enabled = true;
+                    }
+                    if (radioButton2.Checked)
+                    {
+                        for (int i = 0; i < dataGridView1.RowCount; i++)
+                            for (int j = 0; j < dataGridView1.ColumnCount; j++)
                             {
-                                dataGridView1.CurrentCell.Style.BackColor = Color.Black;
-                                int poskol = dataGridView1.CurrentCell.ColumnIndex;
-                                int posstr = dataGridView1.CurrentCell.RowIndex;
-                                dataGridView1[poskol + 1, posstr].Style.BackColor = Color.Black;
-                            }
-                            catch
-                            {
-                                MessageBox.Show("Корабль вышел за границы поля");
-                                dataGridView1.CurrentCell.Style.BackColor = default;
-                                return;
-                            }
-                        }
-                    a++;
-                    if (a == 3) radioButton2.Enabled = false;
-                    if (a == 3) dataGridView1.Enabled = false;
-                    if (a == 3) radioButton3.Enabled = true;
-
-                }
-                if (radioButton3.Checked)
-                {
-                    for (int i = 0; i < dataGridView1.RowCount; i++)
-                        for (int j = 0; j < dataGridView1.ColumnCount; j++)
-                        {
-                            try
-                            {
-                                dataGridView1.CurrentCell.Style.BackColor = Color.Black;
-                                int poskol = dataGridView1.CurrentCell.ColumnIndex;
-                                int posstr = dataGridView1.CurrentCell.RowIndex;
-                                dataGridView1[poskol + 1, posstr].Style.BackColor = Color.Black;
-                                dataGridView1[poskol + 2, posstr].Style.BackColor = Color.Black;
-                            }
-                            catch
-                            {
-                                MessageBox.Show("Корабль вышел за границы поля");
-                                dataGridView1.CurrentCell.Style.BackColor = default;
-                                int poskol = dataGridView1.CurrentCell.ColumnIndex;
-                                int posstr = dataGridView1.CurrentCell.RowIndex;
                                 try
                                 {
-                                    if(dataGridView1[poskol + 1, posstr].Style.BackColor == Color.Black)
-                                    dataGridView1[poskol + 1, posstr].Style.BackColor = default;
-
-                                }   
-                                catch
-                                {
-
-                                }
-                                return;
-                            }
-                        }
-                    a++;
-                    if (a == 2) radioButton4.Enabled = true;
-                    if (a == 2) radioButton3.Enabled = false;
-                    if (a == 2) dataGridView1.Enabled = false;
-                }
-                if (radioButton4.Checked)
-                {
-                    for (int i = 0; i < dataGridView1.RowCount; i++)
-                        for (int j = 0; j < dataGridView1.ColumnCount; j++)
-                        {
-                            try
-                            {
-                                dataGridView1.CurrentCell.Style.BackColor = Color.Black;
-                                int poskol = dataGridView1.CurrentCell.ColumnIndex;
-                                int posstr = dataGridView1.CurrentCell.RowIndex;
-                                dataGridView1[poskol + 1, posstr].Style.BackColor = Color.Black;
-                                dataGridView1[poskol + 2, posstr].Style.BackColor = Color.Black;
-                                dataGridView1[poskol + 3, posstr].Style.BackColor = Color.Black;
-                            }
-                            catch
-                            {
-                                MessageBox.Show("Корабль вышел за границы поля");
-                                dataGridView1.CurrentCell.Style.BackColor = default;
-                                int poskol = dataGridView1.CurrentCell.ColumnIndex;
-                                int posstr = dataGridView1.CurrentCell.RowIndex;
-                                try
-                                {
-                                    if (dataGridView1[poskol + 1, posstr].Style.BackColor == Color.Black)
-                                        dataGridView1[poskol + 1, posstr].Style.BackColor = default;
-
+                                    dataGridView1.CurrentCell.Style.BackColor = Color.Black;
+                                    int poskol = dataGridView1.CurrentCell.ColumnIndex;
+                                    int posstr = dataGridView1.CurrentCell.RowIndex;
+                                    dataGridView1[poskol + 1, posstr].Style.BackColor = Color.Black;
                                 }
                                 catch
                                 {
-
+                                    MessageBox.Show("Корабль вышел за границы поля");
+                                    dataGridView1.CurrentCell.Style.BackColor = default;
+                                    return;
                                 }
+                            }
+                        a++;
+                        if (a == 3) radioButton2.Enabled = false;
+                        if (a == 3) dataGridView1.Enabled = false;
+                        if (a == 3) radioButton3.Enabled = true;
+
+                    }
+                    if (radioButton3.Checked)
+                    {
+                        for (int i = 0; i < dataGridView1.RowCount; i++)
+                            for (int j = 0; j < dataGridView1.ColumnCount; j++)
+                            {
                                 try
                                 {
-                                    if (dataGridView1[poskol + 2, posstr].Style.BackColor == Color.Black)
-                                        dataGridView1[poskol + 2, posstr].Style.BackColor = default;
-
+                                    dataGridView1.CurrentCell.Style.BackColor = Color.Black;
+                                    int poskol = dataGridView1.CurrentCell.ColumnIndex;
+                                    int posstr = dataGridView1.CurrentCell.RowIndex;
+                                    dataGridView1[poskol + 1, posstr].Style.BackColor = Color.Black;
+                                    dataGridView1[poskol + 2, posstr].Style.BackColor = Color.Black;
                                 }
                                 catch
                                 {
+                                    MessageBox.Show("Корабль вышел за границы поля");
+                                    dataGridView1.CurrentCell.Style.BackColor = default;
+                                    int poskol = dataGridView1.CurrentCell.ColumnIndex;
+                                    int posstr = dataGridView1.CurrentCell.RowIndex;
+                                    try
+                                    {
+                                        if (dataGridView1[poskol + 1, posstr].Style.BackColor == Color.Black)
+                                            dataGridView1[poskol + 1, posstr].Style.BackColor = default;
 
+                                    }
+                                    catch
+                                    {
+
+                                    }
+                                    return;
                                 }
-                                return;
                             }
-                        }
-                    a++;
-                    if (a == 1) radioButton4.Enabled = false;
-                    if (a == 1) dataGridView1.Enabled = false;
-                    if (a == 1) button1.Enabled = true;
+                        a++;
+                        if (a == 2) radioButton4.Enabled = true;
+                        if (a == 2) radioButton3.Enabled = false;
+                        if (a == 2) dataGridView1.Enabled = false;
+                    }
+                    if (radioButton4.Checked)
+                    {
+                        for (int i = 0; i < dataGridView1.RowCount; i++)
+                            for (int j = 0; j < dataGridView1.ColumnCount; j++)
+                            {
+                                try
+                                {
+                                    dataGridView1.CurrentCell.Style.BackColor = Color.Black;
+                                    int poskol = dataGridView1.CurrentCell.ColumnIndex;
+                                    int posstr = dataGridView1.CurrentCell.RowIndex;
+                                    dataGridView1[poskol + 1, posstr].Style.BackColor = Color.Black;
+                                    dataGridView1[poskol + 2, posstr].Style.BackColor = Color.Black;
+                                    dataGridView1[poskol + 3, posstr].Style.BackColor = Color.Black;
+                                }
+                                catch
+                                {
+                                    MessageBox.Show("Корабль вышел за границы поля");
+                                    dataGridView1.CurrentCell.Style.BackColor = default;
+                                    int poskol = dataGridView1.CurrentCell.ColumnIndex;
+                                    int posstr = dataGridView1.CurrentCell.RowIndex;
+                                    try
+                                    {
+                                        if (dataGridView1[poskol + 1, posstr].Style.BackColor == Color.Black)
+                                            dataGridView1[poskol + 1, posstr].Style.BackColor = default;
+
+                                    }
+                                    catch
+                                    {
+
+                                    }
+                                    try
+                                    {
+                                        if (dataGridView1[poskol + 2, posstr].Style.BackColor == Color.Black)
+                                            dataGridView1[poskol + 2, posstr].Style.BackColor = default;
+
+                                    }
+                                    catch
+                                    {
+
+                                    }
+                                    return;
+                                }
+                            }
+                        a++;
+                        if (a == 1) radioButton4.Enabled = false;
+                        if (a == 1) dataGridView1.Enabled = false;
+                        if (a == 1) button1.Enabled = true;
+                    }
+                }
+
+
+                if (radioButton6.Checked == true)
+                {
+                    if (radioButton1.Checked)
+                    {
+                        dataGridView1.CurrentCell.Style.BackColor = Color.Black;
+                        a++;
+                        if (a == 4) radioButton2.Enabled = true;
+                        if (a == 4) radioButton1.Enabled = false;
+                        if (a == 4) dataGridView1.Enabled = false;
+                    }
+                    if (radioButton2.Checked)
+                    {
+                        for (int i = 0; i < dataGridView1.RowCount; i++)
+                            for (int j = 0; j < dataGridView1.ColumnCount; j++)
+                            {
+                                try
+                                {
+                                    dataGridView1.CurrentCell.Style.BackColor = Color.Black;
+                                    int poskol = dataGridView1.CurrentCell.ColumnIndex;
+                                    int posstr = dataGridView1.CurrentCell.RowIndex;
+                                    dataGridView1[poskol, posstr + 1].Style.BackColor = Color.Black;
+                                }
+                                catch
+                                {
+                                    MessageBox.Show("Корабль вышел за границы поля");
+                                    dataGridView1.CurrentCell.Style.BackColor = default;
+                                    return;
+                                }
+                            }
+                        a++;
+                        if (a == 3) radioButton3.Enabled = true;
+                        if (a == 3) radioButton2.Enabled = false;
+                        if (a == 3) dataGridView1.Enabled = false;
+
+                    }
+                    if (radioButton3.Checked)
+                    {
+                        for (int i = 0; i < dataGridView1.RowCount; i++)
+                            for (int j = 0; j < dataGridView1.ColumnCount; j++)
+                            {
+                                try
+                                {
+                                    dataGridView1.CurrentCell.Style.BackColor = Color.Black;
+                                    int poskol = dataGridView1.CurrentCell.ColumnIndex;
+                                    int posstr = dataGridView1.CurrentCell.RowIndex;
+                                    dataGridView1[poskol, posstr + 1].Style.BackColor = Color.Black;
+                                    dataGridView1[poskol, posstr + 2].Style.BackColor = Color.Black;
+                                }
+                                catch
+                                {
+                                    MessageBox.Show("Корабль вышел за границы поля");
+                                    dataGridView1.CurrentCell.Style.BackColor = default;
+                                    int poskol = dataGridView1.CurrentCell.ColumnIndex;
+                                    int posstr = dataGridView1.CurrentCell.RowIndex;
+                                    try
+                                    {
+                                        if (dataGridView1[poskol, posstr + 1].Style.BackColor == Color.Black)
+                                            dataGridView1[poskol, posstr + 1].Style.BackColor = default;
+
+                                    }
+                                    catch
+                                    {
+
+                                    }
+                                    return;
+                                }
+                            }
+                        a++;
+                        if (a == 2) radioButton4.Enabled = true;
+                        if (a == 2) radioButton3.Enabled = false;
+                        if (a == 2) dataGridView1.Enabled = false;
+                    }
+                    if (radioButton4.Checked)
+                    {
+                        for (int i = 0; i < dataGridView1.RowCount; i++)
+                            for (int j = 0; j < dataGridView1.ColumnCount; j++)
+                            {
+                                try
+                                {
+                                    dataGridView1.CurrentCell.Style.BackColor = Color.Black;
+                                    int poskol = dataGridView1.CurrentCell.ColumnIndex;
+                                    int posstr = dataGridView1.CurrentCell.RowIndex;
+                                    dataGridView1[poskol, posstr + 1].Style.BackColor = Color.Black;
+                                    dataGridView1[poskol, posstr + 2].Style.BackColor = Color.Black;
+                                    dataGridView1[poskol, posstr + 3].Style.BackColor = Color.Black;
+                                }
+                                catch
+                                {
+                                    MessageBox.Show("Корабль вышел за границы поля");
+                                    dataGridView1.CurrentCell.Style.BackColor = default;
+                                    int poskol = dataGridView1.CurrentCell.ColumnIndex;
+                                    int posstr = dataGridView1.CurrentCell.RowIndex;
+                                    try
+                                    {
+                                        if (dataGridView1[poskol, posstr + 1].Style.BackColor == Color.Black)
+                                            dataGridView1[poskol, posstr + 1].Style.BackColor = default;
+
+                                    }
+                                    catch
+                                    {
+
+                                    }
+                                    try
+                                    {
+                                        if (dataGridView1[poskol, posstr + 2].Style.BackColor == Color.Black)
+                                            dataGridView1[poskol, posstr + 2].Style.BackColor = default;
+
+                                    }
+                                    catch
+                                    {
+
+                                    }
+                                    return;
+                                }
+                            }
+                        a++;
+                        if (a == 1) radioButton4.Enabled = false;
+                        if (a == 1) dataGridView1.Enabled = false;
+                        if (a == 1) button1.Enabled = true;
+                    }
                 }
             }
-            if (radioButton6.Checked == true)
-            {
-                if (radioButton1.Checked)
-                {
-                    dataGridView1.CurrentCell.Style.BackColor = Color.Black;
-                    a++;
-                    if (a == 4) radioButton2.Enabled = true;
-                    if (a == 4) radioButton1.Enabled = false;
-                    if (a == 4) dataGridView1.Enabled = false;
-                }
-                if (radioButton2.Checked)
-                {
-                    for (int i = 0; i < dataGridView1.RowCount; i++)
-                        for (int j = 0; j < dataGridView1.ColumnCount; j++)
-                        {
-                            try
-                            {
-                                dataGridView1.CurrentCell.Style.BackColor = Color.Black;
-                                int poskol = dataGridView1.CurrentCell.ColumnIndex;
-                                int posstr = dataGridView1.CurrentCell.RowIndex;
-                                dataGridView1[poskol, posstr + 1].Style.BackColor = Color.Black;
-                            }
-                            catch
-                            {
-                                MessageBox.Show("Корабль вышел за границы поля");
-                                dataGridView1.CurrentCell.Style.BackColor = default;
-                                return;
-                            }
-                        }
-                    a++;
-                    if (a == 3) radioButton3.Enabled = true;
-                    if (a == 3) radioButton2.Enabled = false;
-                    if (a == 3) dataGridView1.Enabled = false;
-
-                }
-                if (radioButton3.Checked)
-                {
-                    for (int i = 0; i < dataGridView1.RowCount; i++)
-                        for (int j = 0; j < dataGridView1.ColumnCount; j++)
-                        {
-                            try
-                            {
-                                dataGridView1.CurrentCell.Style.BackColor = Color.Black;
-                                int poskol = dataGridView1.CurrentCell.ColumnIndex;
-                                int posstr = dataGridView1.CurrentCell.RowIndex;
-                                dataGridView1[poskol, posstr + 1].Style.BackColor = Color.Black;
-                                dataGridView1[poskol, posstr + 2].Style.BackColor = Color.Black;
-                            }
-                            catch
-                            {
-                                MessageBox.Show("Корабль вышел за границы поля");
-                                dataGridView1.CurrentCell.Style.BackColor = default;
-                                int poskol = dataGridView1.CurrentCell.ColumnIndex;
-                                int posstr = dataGridView1.CurrentCell.RowIndex;
-                                try
-                                {
-                                    if (dataGridView1[poskol, posstr + 1].Style.BackColor == Color.Black)
-                                        dataGridView1[poskol, posstr + 1].Style.BackColor = default;
-
-                                }
-                                catch
-                                {
-
-                                }
-                                return;
-                            }
-                        }
-                    a++;
-                    if (a == 2) radioButton4.Enabled = true;
-                    if (a == 2) radioButton3.Enabled = false;
-                    if (a == 2) dataGridView1.Enabled = false;
-                }
-                if (radioButton4.Checked)
-                {
-                    for (int i = 0; i < dataGridView1.RowCount; i++)
-                        for (int j = 0; j < dataGridView1.ColumnCount; j++)
-                        {
-                            try
-                            {
-                                dataGridView1.CurrentCell.Style.BackColor = Color.Black;
-                                int poskol = dataGridView1.CurrentCell.ColumnIndex;
-                                int posstr = dataGridView1.CurrentCell.RowIndex;
-                                dataGridView1[poskol, posstr + 1].Style.BackColor = Color.Black;
-                                dataGridView1[poskol, posstr + 2].Style.BackColor = Color.Black;
-                                dataGridView1[poskol, posstr + 3].Style.BackColor = Color.Black;
-                            }
-                            catch
-                            {
-                                MessageBox.Show("Корабль вышел за границы поля");
-                                dataGridView1.CurrentCell.Style.BackColor = default;
-                                int poskol = dataGridView1.CurrentCell.ColumnIndex;
-                                int posstr = dataGridView1.CurrentCell.RowIndex;
-                                try
-                                {
-                                    if (dataGridView1[poskol, posstr + 1].Style.BackColor == Color.Black)
-                                        dataGridView1[poskol, posstr + 1].Style.BackColor = default;
-
-                                }
-                                catch
-                                {
-
-                                }
-                                try
-                                {
-                                    if (dataGridView1[poskol, posstr + 2].Style.BackColor == Color.Black)
-                                        dataGridView1[poskol, posstr + 2].Style.BackColor = default;
-
-                                }
-                                catch
-                                {
-
-                                }
-                                return;
-                            }
-                        }
-                    a++;
-                    if (a == 1) radioButton4.Enabled = false;
-                    if (a == 1) dataGridView1.Enabled = false;
-                    if (a == 1) button1.Enabled = true;
-                }
-            }
+            else MessageBox.Show("Здесь уже есть корабль");
         }
 
 
