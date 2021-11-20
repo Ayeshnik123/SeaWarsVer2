@@ -130,18 +130,23 @@ namespace SeaWars
 
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (dataGridView1.CurrentCell.Style.BackColor == default)
+            int poskol = dataGridView1.CurrentCell.ColumnIndex;
+            int posstr = dataGridView1.CurrentCell.RowIndex;
+            if (dataGridView1.CurrentCell.Style.BackColor == default && dataGridView1[poskol + 1,posstr].Style.BackColor == default && dataGridView1[poskol - 1, posstr].Style.BackColor == default
+                && dataGridView1[poskol, posstr + 1].Style.BackColor == default && dataGridView1[poskol, posstr - 1].Style.BackColor == default)
             {
                 if (radioButton5.Checked == true)
                 {
                     if (radioButton1.Checked)
-                    {
-                        dataGridView1.CurrentCell.Style.BackColor = Color.Black;
-                        a++;
-                        if (a == 4) radioButton1.Enabled = false;
-                        if (a == 4) dataGridView1.Enabled = false;
-                        if (a == 4) radioButton2.Enabled = true;
-                    }
+                        {
+                            {
+                                dataGridView1.CurrentCell.Style.BackColor = Color.Black;
+                                a++;
+                                if (a == 4) radioButton1.Enabled = false;
+                                if (a == 4) dataGridView1.Enabled = false;
+                                if (a == 4) radioButton2.Enabled = true;
+                            }
+                        }
                     if (radioButton2.Checked)
                     {
                         for (int i = 0; i < dataGridView1.RowCount; i++)
@@ -150,8 +155,7 @@ namespace SeaWars
                                 try
                                 {
                                     dataGridView1.CurrentCell.Style.BackColor = Color.Black;
-                                    int poskol = dataGridView1.CurrentCell.ColumnIndex;
-                                    int posstr = dataGridView1.CurrentCell.RowIndex;
+
                                     dataGridView1[poskol + 1, posstr].Style.BackColor = Color.Black;
                                 }
                                 catch
@@ -175,8 +179,6 @@ namespace SeaWars
                                 try
                                 {
                                     dataGridView1.CurrentCell.Style.BackColor = Color.Black;
-                                    int poskol = dataGridView1.CurrentCell.ColumnIndex;
-                                    int posstr = dataGridView1.CurrentCell.RowIndex;
                                     dataGridView1[poskol + 1, posstr].Style.BackColor = Color.Black;
                                     dataGridView1[poskol + 2, posstr].Style.BackColor = Color.Black;
                                 }
@@ -184,8 +186,6 @@ namespace SeaWars
                                 {
                                     MessageBox.Show("Корабль вышел за границы поля");
                                     dataGridView1.CurrentCell.Style.BackColor = default;
-                                    int poskol = dataGridView1.CurrentCell.ColumnIndex;
-                                    int posstr = dataGridView1.CurrentCell.RowIndex;
                                     try
                                     {
                                         if (dataGridView1[poskol + 1, posstr].Style.BackColor == Color.Black)
@@ -212,8 +212,6 @@ namespace SeaWars
                                 try
                                 {
                                     dataGridView1.CurrentCell.Style.BackColor = Color.Black;
-                                    int poskol = dataGridView1.CurrentCell.ColumnIndex;
-                                    int posstr = dataGridView1.CurrentCell.RowIndex;
                                     dataGridView1[poskol + 1, posstr].Style.BackColor = Color.Black;
                                     dataGridView1[poskol + 2, posstr].Style.BackColor = Color.Black;
                                     dataGridView1[poskol + 3, posstr].Style.BackColor = Color.Black;
@@ -222,8 +220,6 @@ namespace SeaWars
                                 {
                                     MessageBox.Show("Корабль вышел за границы поля");
                                     dataGridView1.CurrentCell.Style.BackColor = default;
-                                    int poskol = dataGridView1.CurrentCell.ColumnIndex;
-                                    int posstr = dataGridView1.CurrentCell.RowIndex;
                                     try
                                     {
                                         if (dataGridView1[poskol + 1, posstr].Style.BackColor == Color.Black)
@@ -273,8 +269,6 @@ namespace SeaWars
                                 try
                                 {
                                     dataGridView1.CurrentCell.Style.BackColor = Color.Black;
-                                    int poskol = dataGridView1.CurrentCell.ColumnIndex;
-                                    int posstr = dataGridView1.CurrentCell.RowIndex;
                                     dataGridView1[poskol, posstr + 1].Style.BackColor = Color.Black;
                                 }
                                 catch
@@ -298,8 +292,6 @@ namespace SeaWars
                                 try
                                 {
                                     dataGridView1.CurrentCell.Style.BackColor = Color.Black;
-                                    int poskol = dataGridView1.CurrentCell.ColumnIndex;
-                                    int posstr = dataGridView1.CurrentCell.RowIndex;
                                     dataGridView1[poskol, posstr + 1].Style.BackColor = Color.Black;
                                     dataGridView1[poskol, posstr + 2].Style.BackColor = Color.Black;
                                 }
@@ -307,8 +299,6 @@ namespace SeaWars
                                 {
                                     MessageBox.Show("Корабль вышел за границы поля");
                                     dataGridView1.CurrentCell.Style.BackColor = default;
-                                    int poskol = dataGridView1.CurrentCell.ColumnIndex;
-                                    int posstr = dataGridView1.CurrentCell.RowIndex;
                                     try
                                     {
                                         if (dataGridView1[poskol, posstr + 1].Style.BackColor == Color.Black)
@@ -335,8 +325,6 @@ namespace SeaWars
                                 try
                                 {
                                     dataGridView1.CurrentCell.Style.BackColor = Color.Black;
-                                    int poskol = dataGridView1.CurrentCell.ColumnIndex;
-                                    int posstr = dataGridView1.CurrentCell.RowIndex;
                                     dataGridView1[poskol, posstr + 1].Style.BackColor = Color.Black;
                                     dataGridView1[poskol, posstr + 2].Style.BackColor = Color.Black;
                                     dataGridView1[poskol, posstr + 3].Style.BackColor = Color.Black;
@@ -345,8 +333,6 @@ namespace SeaWars
                                 {
                                     MessageBox.Show("Корабль вышел за границы поля");
                                     dataGridView1.CurrentCell.Style.BackColor = default;
-                                    int poskol = dataGridView1.CurrentCell.ColumnIndex;
-                                    int posstr = dataGridView1.CurrentCell.RowIndex;
                                     try
                                     {
                                         if (dataGridView1[poskol, posstr + 1].Style.BackColor == Color.Black)
