@@ -139,7 +139,6 @@ namespace SeaWars
                     if (a == 4) radioButton1.Enabled = false;
                     if (a == 4) dataGridView1.Enabled = false;
                     if (a == 4) radioButton2.Enabled = true;
-
                 }
                 if (radioButton2.Checked)
                 {
@@ -159,7 +158,6 @@ namespace SeaWars
                                 dataGridView1.CurrentCell.Style.BackColor = default;
                                 return;
                             }
-
                         }
                     a++;
                     if (a == 3) radioButton2.Enabled = false;
@@ -184,6 +182,18 @@ namespace SeaWars
                             {
                                 MessageBox.Show("Корабль вышел за границы поля");
                                 dataGridView1.CurrentCell.Style.BackColor = default;
+                                int poskol = dataGridView1.CurrentCell.ColumnIndex;
+                                int posstr = dataGridView1.CurrentCell.RowIndex;
+                                try
+                                {
+                                    if(dataGridView1[poskol + 1, posstr].Style.BackColor == Color.Black)
+                                    dataGridView1[poskol + 1, posstr].Style.BackColor = default;
+
+                                }   
+                                catch
+                                {
+
+                                }
                                 return;
                             }
                         }
@@ -210,6 +220,28 @@ namespace SeaWars
                             {
                                 MessageBox.Show("Корабль вышел за границы поля");
                                 dataGridView1.CurrentCell.Style.BackColor = default;
+                                int poskol = dataGridView1.CurrentCell.ColumnIndex;
+                                int posstr = dataGridView1.CurrentCell.RowIndex;
+                                try
+                                {
+                                    if (dataGridView1[poskol + 1, posstr].Style.BackColor == Color.Black)
+                                        dataGridView1[poskol + 1, posstr].Style.BackColor = default;
+
+                                }
+                                catch
+                                {
+
+                                }
+                                try
+                                {
+                                    if (dataGridView1[poskol + 2, posstr].Style.BackColor == Color.Black)
+                                        dataGridView1[poskol + 2, posstr].Style.BackColor = default;
+
+                                }
+                                catch
+                                {
+
+                                }
                                 return;
                             }
                         }
@@ -271,6 +303,18 @@ namespace SeaWars
                             {
                                 MessageBox.Show("Корабль вышел за границы поля");
                                 dataGridView1.CurrentCell.Style.BackColor = default;
+                                int poskol = dataGridView1.CurrentCell.ColumnIndex;
+                                int posstr = dataGridView1.CurrentCell.RowIndex;
+                                try
+                                {
+                                    if (dataGridView1[poskol, posstr + 1].Style.BackColor == Color.Black)
+                                        dataGridView1[poskol, posstr + 1].Style.BackColor = default;
+
+                                }
+                                catch
+                                {
+
+                                }
                                 return;
                             }
                         }
@@ -297,6 +341,28 @@ namespace SeaWars
                             {
                                 MessageBox.Show("Корабль вышел за границы поля");
                                 dataGridView1.CurrentCell.Style.BackColor = default;
+                                int poskol = dataGridView1.CurrentCell.ColumnIndex;
+                                int posstr = dataGridView1.CurrentCell.RowIndex;
+                                try
+                                {
+                                    if (dataGridView1[poskol, posstr + 1].Style.BackColor == Color.Black)
+                                        dataGridView1[poskol, posstr + 1].Style.BackColor = default;
+
+                                }
+                                catch
+                                {
+
+                                }
+                                try
+                                {
+                                    if (dataGridView1[poskol, posstr + 2].Style.BackColor == Color.Black)
+                                        dataGridView1[poskol, posstr + 2].Style.BackColor = default;
+
+                                }
+                                catch
+                                {
+
+                                }
                                 return;
                             }
                         }

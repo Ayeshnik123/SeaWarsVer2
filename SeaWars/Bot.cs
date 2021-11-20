@@ -97,7 +97,7 @@ namespace SeaWars
             Random rand = new Random();
             for (int i = 0; i < 1; i++)
             {
-                abv = rand.Next(1, 100);
+                abv = rand.Next(1, 101);
                 switch (abv)
                 {
                     case (1):
@@ -110,7 +110,7 @@ namespace SeaWars
                         break;
                     case (3):
                         if (dataGridView1[2, 0].Style.BackColor == Color.Black) dataGridView1[2, 0].Style.BackColor = Color.Red;
-                        if (dataGridView1[2, 0].Style.BackColor == Color.White) dataGridView1[2, 0].Style.BackColor = Color.Aqua;
+                        if (dataGridView1[2, 0].Style.BackColor == default) dataGridView1[2, 0].Style.BackColor = Color.Aqua;
                         break;
                     case (4):
                         if (dataGridView1[3, 0].Style.BackColor == Color.Black) dataGridView1[3, 0].Style.BackColor = Color.Red;
@@ -150,7 +150,7 @@ namespace SeaWars
                         break;
                     case (13):
                         if (dataGridView1[2, 1].Style.BackColor == Color.Black) dataGridView1[2, 1].Style.BackColor = Color.Red;
-                        if (dataGridView1[2, 1].Style.BackColor == Color.White) dataGridView1[2, 1].Style.BackColor = Color.Aqua;
+                        if (dataGridView1[2, 1].Style.BackColor == default) dataGridView1[2, 1].Style.BackColor = Color.Aqua;
                         break;
                     case (14):
                         if (dataGridView1[3, 1].Style.BackColor == Color.Black) dataGridView1[3, 1].Style.BackColor = Color.Red;
@@ -190,7 +190,7 @@ namespace SeaWars
                         break;
                     case (23):
                         if (dataGridView1[2, 2].Style.BackColor == Color.Black) dataGridView1[2, 2].Style.BackColor = Color.Red;
-                        if (dataGridView1[2, 2].Style.BackColor == Color.White) dataGridView1[2, 2].Style.BackColor = Color.Aqua;
+                        if (dataGridView1[2, 2].Style.BackColor == default) dataGridView1[2, 2].Style.BackColor = Color.Aqua;
                         break;
                     case (24):
                         if (dataGridView1[3, 2].Style.BackColor == Color.Black) dataGridView1[3, 2].Style.BackColor = Color.Red;
@@ -230,7 +230,7 @@ namespace SeaWars
                         break;
                     case (33):
                         if (dataGridView1[2, 3].Style.BackColor == Color.Black) dataGridView1[2, 3].Style.BackColor = Color.Red;
-                        if (dataGridView1[2, 3].Style.BackColor == Color.White) dataGridView1[2, 3].Style.BackColor = Color.Aqua;
+                        if (dataGridView1[2, 3].Style.BackColor == default) dataGridView1[2, 3].Style.BackColor = Color.Aqua;
                         break;
                     case (34):
                         if (dataGridView1[3, 3].Style.BackColor == Color.Black) dataGridView1[3, 3].Style.BackColor = Color.Red;
@@ -270,7 +270,7 @@ namespace SeaWars
                         break;
                     case (43):
                         if (dataGridView1[2, 4].Style.BackColor == Color.Black) dataGridView1[2, 4].Style.BackColor = Color.Red;
-                        if (dataGridView1[2, 4].Style.BackColor == Color.White) dataGridView1[2, 4].Style.BackColor = Color.Aqua;
+                        if (dataGridView1[2, 4].Style.BackColor == default) dataGridView1[2, 4].Style.BackColor = Color.Aqua;
                         break;
                     case (44):
                         if (dataGridView1[3, 4].Style.BackColor == Color.Black) dataGridView1[3, 4].Style.BackColor = Color.Red;
@@ -350,7 +350,7 @@ namespace SeaWars
                         break;
                     case (63):
                         if (dataGridView1[2, 6].Style.BackColor == Color.Black) dataGridView1[2, 6].Style.BackColor = Color.Red;
-                        if (dataGridView1[2, 6].Style.BackColor == Color.White) dataGridView1[2, 6].Style.BackColor = Color.Aqua;
+                        if (dataGridView1[2, 6].Style.BackColor == default) dataGridView1[2, 6].Style.BackColor = Color.Aqua;
                         break;
                     case (64):
                         if (dataGridView1[3, 6].Style.BackColor == Color.Black) dataGridView1[3, 6].Style.BackColor = Color.Red;
@@ -390,7 +390,7 @@ namespace SeaWars
                         break;
                     case (73):
                         if (dataGridView1[2, 7].Style.BackColor == Color.Black) dataGridView1[2, 7].Style.BackColor = Color.Red;
-                        if (dataGridView1[2, 7].Style.BackColor == Color.White) dataGridView1[2, 7].Style.BackColor = Color.Aqua;
+                        if (dataGridView1[2, 7].Style.BackColor == default) dataGridView1[2, 7].Style.BackColor = Color.Aqua;
                         break;
                     case (74):
                         if (dataGridView1[3, 7].Style.BackColor == Color.Black) dataGridView1[3, 7].Style.BackColor = Color.Red;
@@ -470,7 +470,7 @@ namespace SeaWars
                         break;
                     case (93):
                         if (dataGridView1[2, 9].Style.BackColor == Color.Black) dataGridView1[2, 9].Style.BackColor = Color.Red;
-                        if (dataGridView1[2, 9].Style.BackColor == Color.White) dataGridView1[2, 9].Style.BackColor = Color.Aqua;
+                        if (dataGridView1[2, 9].Style.BackColor == default) dataGridView1[2, 9].Style.BackColor = Color.Aqua;
                         break;
                     case (94):
                         if (dataGridView1[3, 9].Style.BackColor == Color.Black) dataGridView1[3, 9].Style.BackColor = Color.Red;
