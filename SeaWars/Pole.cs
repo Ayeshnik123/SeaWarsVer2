@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
+
 
 namespace SeaWars
 {
@@ -26,7 +28,8 @@ namespace SeaWars
 
         private void Pole_Load(object sender, EventArgs e)
         {
-
+            if (File.Exists("result.txt"))
+                textBox3.Text = File.ReadAllText("result.txt");
             //button1.Enabled = false;
             radioButton2.Enabled = false;
             radioButton3.Enabled = false;
@@ -377,6 +380,8 @@ namespace SeaWars
             Bot.ubil(dataGridView2);
             schet++;
             textBox1.Text = Convert.ToString(schet);
+            File.WriteAllText("result.txt", textBox1.Text + " " + textBox2.Text);
+
 
         }
 
