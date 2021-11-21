@@ -15,6 +15,7 @@ namespace SeaWars
     {
         int rastanovka = 0;
         int a = 0;
+        int schet = 0;
 
 
         public Pole()
@@ -132,8 +133,8 @@ namespace SeaWars
         {
             int poskol = dataGridView1.CurrentCell.ColumnIndex;
             int posstr = dataGridView1.CurrentCell.RowIndex;
-            if (dataGridView1.CurrentCell.Style.BackColor == default && dataGridView1[poskol + 1,posstr].Style.BackColor == default && dataGridView1[poskol - 1, posstr].Style.BackColor == default
-                && dataGridView1[poskol, posstr + 1].Style.BackColor == default && dataGridView1[poskol, posstr - 1].Style.BackColor == default)
+            if (dataGridView1.CurrentCell.Style.BackColor == default /* && dataGridView1[poskol + 1,posstr].Style.BackColor == default && dataGridView1[poskol - 1, posstr].Style.BackColor == default
+                && dataGridView1[poskol, posstr + 1].Style.BackColor == default && dataGridView1[poskol, posstr - 1].Style.BackColor == default*/)
             {
                 if (radioButton5.Checked == true)
                 {
@@ -374,7 +375,9 @@ namespace SeaWars
             else this.dataGridView2.CurrentCell.Style.BackColor = Color.Aqua;
             Bot.shoot(dataGridView1, rastanovka);
             Bot.ubil(dataGridView2);
- 
+            schet++;
+            textBox1.Text = Convert.ToString(schet);
+
         }
 
         private void korabli_Click(object sender, EventArgs e)
