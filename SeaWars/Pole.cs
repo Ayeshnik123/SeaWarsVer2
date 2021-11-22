@@ -31,6 +31,7 @@ namespace SeaWars
             if (File.Exists("result.txt"))
                 textBox3.Text = File.ReadAllText("result.txt");
             //button1.Enabled = false;
+            textBox4.Visible = false;
             radioButton2.Enabled = false;
             radioButton3.Enabled = false;
             radioButton4.Enabled = false;
@@ -98,6 +99,8 @@ namespace SeaWars
 
         private void button2_Click(object sender, EventArgs e)
         {
+            textBox4.Clear();
+            textBox4.Visible = false;
             button1.Visible = true;
             //button1.Enabled = false;
             for (int i = 0; i < dataGridView1.RowCount; i++)
@@ -123,7 +126,7 @@ namespace SeaWars
 
         private void button1_Click(object sender, EventArgs e)
         {
-            
+            textBox4.Visible = true;
             Bot.Pole(dataGridView2, rastanovka);
             groupBox1.Visible = false;
             korabli.Visible = false;
@@ -375,12 +378,17 @@ namespace SeaWars
         {
             if (dataGridView2.CurrentCell.Style.BackColor == Color.Transparent) dataGridView2.CurrentCell.Style.BackColor = Color.Red;
             if (dataGridView2.CurrentCell.Style.BackColor == Color.Red) dataGridView2.CurrentCell.Style.BackColor = Color.Red;
-            else this.dataGridView2.CurrentCell.Style.BackColor = Color.Aqua;
+            else dataGridView2.CurrentCell.Style.BackColor = Color.Aqua;
+            if (dataGridView2.CurrentCell.Style.BackColor == Color.Aqua) textBox4.Text = "Мимо";
+            if (dataGridView2.CurrentCell.Style.BackColor == Color.Red) textBox4.Text = "Попал";
             Bot.shoot(dataGridView1, rastanovka);
-            Bot.ubil(dataGridView2);
+            Bot.ubil(dataGridView2, textBox1, textBox2);
             schet++;
             textBox1.Text = Convert.ToString(schet);
-            File.WriteAllText("result.txt", textBox1.Text + " " + textBox2.Text);
+
+            //File.WriteAllText("result.txt", textBox1.Text + " " + textBox2.Text);
+            //File.AppendAllText("result.txt", textBox1.Text + " " + textBox2.Text);
+
 
 
         }
