@@ -381,7 +381,7 @@ namespace SeaWars
             else dataGridView2.CurrentCell.Style.BackColor = Color.Aqua;
             if (dataGridView2.CurrentCell.Style.BackColor == Color.Aqua) textBox4.Text = "Мимо";
             if (dataGridView2.CurrentCell.Style.BackColor == Color.Red) textBox4.Text = "Попал";
-            Bot.shoot(dataGridView1, rastanovka);
+            if (dataGridView2.CurrentCell.Style.BackColor == Color.Aqua) Bot.shoot(dataGridView1, rastanovka);
             Bot.ubil(dataGridView2, textBox1, textBox2);
             schet++;
             textBox1.Text = Convert.ToString(schet);
