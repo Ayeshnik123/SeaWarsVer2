@@ -18,12 +18,9 @@ namespace SeaWars
         int rastanovka = 0;
         int a = 0;
         int schet = 0;
-
-
         public Pole()
         {
             InitializeComponent();
-           
         }
 
         private void Pole_Load(object sender, EventArgs e)
@@ -162,7 +159,6 @@ namespace SeaWars
                                 try
                                 {
                                     dataGridView1.CurrentCell.Style.BackColor = Color.Black;
-
                                     dataGridView1[poskol + 1, posstr].Style.BackColor = Color.Black;
                                 }
                                 catch
@@ -197,7 +193,6 @@ namespace SeaWars
                                     {
                                         if (dataGridView1[poskol + 1, posstr].Style.BackColor == Color.Black)
                                             dataGridView1[poskol + 1, posstr].Style.BackColor = default;
-
                                     }
                                     catch
                                     {
@@ -231,7 +226,6 @@ namespace SeaWars
                                     {
                                         if (dataGridView1[poskol + 1, posstr].Style.BackColor == Color.Black)
                                             dataGridView1[poskol + 1, posstr].Style.BackColor = default;
-
                                     }
                                     catch
                                     {
@@ -241,7 +235,6 @@ namespace SeaWars
                                     {
                                         if (dataGridView1[poskol + 2, posstr].Style.BackColor == Color.Black)
                                             dataGridView1[poskol + 2, posstr].Style.BackColor = default;
-
                                     }
                                     catch
                                     {
@@ -310,7 +303,6 @@ namespace SeaWars
                                     {
                                         if (dataGridView1[poskol, posstr + 1].Style.BackColor == Color.Black)
                                             dataGridView1[poskol, posstr + 1].Style.BackColor = default;
-
                                     }
                                     catch
                                     {
@@ -344,7 +336,6 @@ namespace SeaWars
                                     {
                                         if (dataGridView1[poskol, posstr + 1].Style.BackColor == Color.Black)
                                             dataGridView1[poskol, posstr + 1].Style.BackColor = default;
-
                                     }
                                     catch
                                     {
@@ -354,7 +345,6 @@ namespace SeaWars
                                     {
                                         if (dataGridView1[poskol, posstr + 2].Style.BackColor == Color.Black)
                                             dataGridView1[poskol, posstr + 2].Style.BackColor = default;
-
                                     }
                                     catch
                                     {
@@ -385,18 +375,11 @@ namespace SeaWars
             Bot.ubil(dataGridView2, textBox1, textBox2);
             schet++;
             textBox1.Text = Convert.ToString(schet);
-
-            //File.WriteAllText("result.txt", textBox1.Text + " " + textBox2.Text);
-            //File.AppendAllText("result.txt", textBox1.Text + " " + textBox2.Text);
-
-
-
         }
 
         private void korabli_Click(object sender, EventArgs e)
         {
             groupBox1.Visible = true;
-
         }
 
         private void dataGridView2_SelectionChanged(object sender, EventArgs e)
@@ -413,15 +396,12 @@ namespace SeaWars
         {
             dataGridView1.Enabled = true;
             a = 0;
-            
-
         }
 
         private void RadioButton3_CheckedChanged(object sender, EventArgs e)
         {
             dataGridView1.Enabled = true;
             a = 0;
-
         }
 
         private void RadioButton4_CheckedChanged(object sender, EventArgs e)

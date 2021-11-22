@@ -13,7 +13,6 @@ namespace SeaWars
     {
         public static void Pole(DataGridView dataGridView2, int rastanovka)
         {
-
             Random rand = new Random();
             for (int i = 0; i < 1; i++)
             {
@@ -41,8 +40,6 @@ namespace SeaWars
                         dataGridView2[0, 4].Style.BackColor = Color.Transparent;//4
                         dataGridView2[0, 5].Style.BackColor = Color.Transparent;//4
                         dataGridView2[0, 6].Style.BackColor = Color.Transparent;//4
-
-
                         break;
 
                     case (2):
@@ -906,8 +903,6 @@ namespace SeaWars
             {
                 MessageBox.Show("Вы победили");
                 File.AppendAllText("result.txt", Environment.NewLine + textBox1.Text + " " + textBox2.Text);
-
-
             }
             
         }
