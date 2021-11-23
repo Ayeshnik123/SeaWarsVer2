@@ -217,6 +217,7 @@ namespace SeaWars
             // 
             this.textBox1.Location = new System.Drawing.Point(752, 242);
             this.textBox1.Name = "textBox1";
+            this.textBox1.ReadOnly = true;
             this.textBox1.Size = new System.Drawing.Size(50, 20);
             this.textBox1.TabIndex = 13;
             // 
@@ -251,6 +252,7 @@ namespace SeaWars
             this.textBox3.Location = new System.Drawing.Point(59, 242);
             this.textBox3.Multiline = true;
             this.textBox3.Name = "textBox3";
+            this.textBox3.ReadOnly = true;
             this.textBox3.Size = new System.Drawing.Size(143, 83);
             this.textBox3.TabIndex = 17;
             // 
@@ -258,6 +260,7 @@ namespace SeaWars
             // 
             this.textBox4.Location = new System.Drawing.Point(474, 270);
             this.textBox4.Name = "textBox4";
+            this.textBox4.ReadOnly = true;
             this.textBox4.Size = new System.Drawing.Size(115, 20);
             this.textBox4.TabIndex = 18;
             this.textBox4.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;

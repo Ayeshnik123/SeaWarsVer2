@@ -25,9 +25,11 @@ namespace SeaWars
 
         private void Pole_Load(object sender, EventArgs e)
         {
-            if (File.Exists("result.txt"))
-                textBox3.Text = File.ReadAllText("result.txt");
+            if (File.Exists("result.docx")) textBox3.Text = File.ReadAllText("result.docx");
             //button1.Enabled = false;
+            textBox1.ReadOnly = true;
+            textBox3.ReadOnly = true;
+            textBox4.ReadOnly = true;
             textBox4.Visible = false;
             radioButton2.Enabled = false;
             radioButton3.Enabled = false;
